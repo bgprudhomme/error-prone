@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest ]
-        java: [ 21, 17, 11 ]
+        java: [ 21 ]
         experimental: [ false ]
         # Only test on macos and windows with a single recent JDK to avoid a
         # combinatorial explosion of test configurations.
@@ -37,12 +37,6 @@ jobs:
           - os: ubuntu-latest
             java: 21
             experimental: false
-          - os: ubuntu-latest
-            java: 22
-            experimental: false
-          - os: ubuntu-latest
-            java: EA
-            experimental: true
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental }}
     steps:
