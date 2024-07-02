@@ -4,9 +4,11 @@ on:
   push:
     branches:
     - master
+    - java21
   pull_request:
     branches:
     - master
+    - java21
 
 permissions:
   contents: read #  to fetch code (actions/checkout)
